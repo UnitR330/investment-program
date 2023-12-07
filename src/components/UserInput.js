@@ -1,23 +1,8 @@
-import { useState } from "react"; 
+
+const UserInput = ({userInput, handleChange}) => {
 
 
-const UserInput = () => {
 
-    const[userInput, setUserInput] = useState({
-        initialInvestment: 10000,
-        annualInvestment: 1200,
-        expectedReturn: 6,
-        duration: 10,
-    })
-
-const handleChange = (inputIdentifier, newValue) => {
-    setUserInput((previousInput) => {
-    return {
-        ...previousInput, 
-        [inputIdentifier]: newValue
-    }
-})
-}
 return (<section id="users-input">
     <div className="input-group">
 <p>
@@ -50,7 +35,7 @@ return (<section id="users-input">
 </div>
     </section>
         )
-    }
+}
 
 
 export default UserInput;
